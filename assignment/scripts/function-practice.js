@@ -122,8 +122,20 @@ function positiveNumbers(array) {
   }
   return newArray
 }
-
+//tests
+console.log(test)
 console.log(positiveNumbers([-1, -2, -3]))
+console.log(positiveNumbers([-50, 100, 200, -5]))
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+//Create a function that will reverse a string.
+function solution(str){
+  let testString = ''
+  for (let i=str.length - 1; i>= 0; i--){
+    testString += str[i]
+  }
+  return testString
+}
+
+console.log(solution('gabagool'))
