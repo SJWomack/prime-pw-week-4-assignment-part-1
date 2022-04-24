@@ -74,10 +74,10 @@ console.log(`The last item is: ${getLast(test)}`)
 function find(value, array) {
   for (let thing of array) {
     if (thing === value) {
-      return 'true';
+      return true;
     }
   }
-  return 'false';
+  return false;
 
 }
 
@@ -90,26 +90,40 @@ console.log(find(2, test));
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
   if (letter === string.charAt(0)) {
-    return 'true'
+    return true
   }
-  return 'false'
+  return false
 }
 console.log('isFirstLetter - should say true', isFirstLetter('a', 'apple'));
 console.log('isFirstLetter - should say false', isFirstLetter('z', 'apple'));
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll() {
-  let sum = 0
+function sumAll(array) {
+  let sum = 0;
   // TODO: loop to add items
+  for (let numbers of array) {
+    sum += numbers;
+  }
   return sum;
 }
+console.log(sumAll([5, 6, 8, 9]));
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
-//     return an empty array. Note: The input array should not change.
+//   return an empty array. Note: The input array should not change.
 
+function positiveNumbers(array) {
+  let newArray = []
+  for (let positiveInt of array) {
+    if (positiveInt >= 0) {
+      newArray.push(positiveInt)
+    }
+  }
+  return newArray
+}
 
-
-// 11. Pick a problem from Edabit(https://edabit.com/) or 
+console.log(positiveNumbers([-1, -2, -3]))
+// 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
