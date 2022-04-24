@@ -56,15 +56,15 @@ console.log('isPositive - should say false', isPositive(-3));
 //    array is empty, return `undefined`.
 function getLast(array) {
   let length = array.length;
-  if ( length > 0){
+  if (length > 0) {
     return array.slice(-1);
   }
-  else{
+  else {
     return 'undefined';
   }
 
 }
-let test=[];
+let test = [1, 2, 3, 4];
 console.log(`The last item is: ${getLast(test)}`)
 
 
@@ -72,8 +72,16 @@ console.log(`The last item is: ${getLast(test)}`)
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
+  for (let thing of array) {
+    if (thing === value) {
+      return 'true';
+    }
+  }
+  return 'false';
 
 }
+
+console.log(find(4, test));
 
 // ----------------------
 // Stretch Goals
