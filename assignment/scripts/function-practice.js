@@ -114,13 +114,13 @@ console.log(sumAll([5, 6, 8, 9]));
 //   return an empty array. Note: The input array should not change.
 
 function positiveNumbers(array) {
-  let newArray = []
+  let newArray = [];
   for (let positiveInt of array) {
     if (positiveInt >= 0) {
-      newArray.push(positiveInt)
+      newArray.push(positiveInt);
     }
   }
-  return newArray
+  return newArray;
 }
 //tests
 console.log(test)
@@ -131,11 +131,11 @@ console.log(positiveNumbers([-50, 100, 200, -5]))
 //     here in a comment, write the function, and test it!
 //Create a function that will reverse a string.
 function solution(str){
-  let testString = ''
+  let testString = '';
   for (let i=str.length - 1; i>= 0; i--){
-    testString += str[i]
+    testString += str[i];
   }
-  return testString
+  return testString;
 }
 
 console.log(solution('gabagool'))
