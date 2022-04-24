@@ -23,25 +23,27 @@ console.log(` Hello ${helloName('Stephen')}`);
 // 3. Function to add two numbers together & return the result
 function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
-  return firstNumber + secondNumber
+  return firstNumber + secondNumber;
 
 }
-console.log(`Adding 3 and 5: ${addNumbers(3, 5)}`)
+console.log(`Adding 3 and 5: ${addNumbers(3, 5)}`);
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree(firstNumber, secondNumber, thirdNumber) {
-  return firstNumber * secondNumber * thirdNumber
+  return firstNumber * secondNumber * thirdNumber;
 
 }
-console.log(`Multiplying 3, 5, and 100: ${multiplyThree(3,5,100)}`)
+console.log(`Multiplying 3, 5, and 100: ${multiplyThree(3, 5, 100)}`);
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    return true;
   }
-  return;
+  else {
+    return false;
+  }
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -53,8 +55,18 @@ console.log('isPositive - should say false', isPositive(-3));
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
+  let length = array.length;
+  if ( length > 0){
+    return array.slice(-1);
+  }
+  else{
+    return 'undefined';
+  }
 
 }
+let test=[];
+console.log(`The last item is: ${getLast(test)}`)
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
