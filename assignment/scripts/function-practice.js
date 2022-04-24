@@ -57,11 +57,11 @@ console.log('isPositive - should say false', isPositive(-3));
 function getLast(array) {
   let length = array.length;
   if (length > 0) {
-    return array.slice(-1);
+    return array[length - 1];
   }
-  else {
-    return 'undefined';
-  }
+
+  return 'undefined';
+
 
 }
 let test = [1, 2, 3, 4];
@@ -81,7 +81,7 @@ function find(value, array) {
 
 }
 
-console.log(find(4, test));
+console.log(find(2, test));
 
 // ----------------------
 // Stretch Goals
